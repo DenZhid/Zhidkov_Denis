@@ -1,1 +1,0 @@
-Frontend course of Technopolis
