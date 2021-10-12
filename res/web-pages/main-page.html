@@ -5,53 +5,50 @@
     <title>Denis Zhidkov CV</title>
 </head>
 <body>
-<div class="outer-level">
-    <img src="./img/my-photo"
-         width="50"
-         height="50"
-         alt="My Photo" />
-    <div class="personal-info">
-        <h1 class="name">Denis Zhidkov</h1>
-        <h2 class="ocupation">Future Web Developer</h2>
-    </div>
-    <nav class="types-of-communication">
-        <img src="./img/vk-logo"
-             width="50"
-             height="50"
-             alt="VK logo" />
-        <a class="vk" href="https://vk.com/pusyashniy_boy">VK</a>
-        <img src="./img/ok-logo"
-             width="50"
-             height="50"
-             alt="OK logo" />
-        <a class="ok" href="https://ok.ru/profile/593794548737">Odnoklasniki</a>
-        <img src="./img/gmail-logo"
-             width="50"
-             height="50"
-             alt="Gmail logo" />
-        <div class="post">denis.zhidkov01@gmail.com</div>
-    </nav>
-</div>
-<div class="inner-level">
-    <div class="abilities">
-        <h3 class="ability-label">Abilities</h3>
-        <div class="primary-ability">Java</div>
-        <div class="secondary-ability">JavaScript</div>
-        <div class="secondary-ability">HTML</div>
-        <div class="secondary-ability">CSS</div>
-    </div>
-    <div class="projects">
-        <h3 class="projects-label">Porjects</h3>
-        <div class="project">
-            <h4 class="project-name">MyCV</h4>
-            <h5 class="technologies">HTML</h5>
-            <h6 class="description">My simple CV</h6>
+<div class="cv-card">
+    <div class="big-rectangle">
+        <div class="information-with-photo">
+            <div class="photo">
+                <img class="big-circle-photo"
+                     src="/img/my-photo.jpg"
+                     alt="My Photo"/>
+                <div class="shadow-after-photo"></div>
+            </div>
         </div>
+        <div class="br-name">Denis Zhidkov</div>
+        <div class="br-profession">Web Designer</div>
+        <nav class="social-media">
+            <div class="ok">
+                <a href="https://ok.ru/profile/593794548737">
+                    <img class="small-circle-photo"
+                         src="/img/ok-logo.png"
+                         alt="OK-logo"/>
+                </a>
+            </div>
+            <div class="vk">
+                <a href="https://vk.com/pusyashniy_boy">
+                    <img class="small-circle-photo"
+                         src="/img/vk-logo.png"
+                         alt="VK-logo"/>
+                </a>
+            </div>
+           <div class="github">
+               <a href="https://github.com/DenZhid">
+                   <img class="small-circle-photo"
+                        src="/img/github-logo.jpg"
+                        alt="GitHub logo"/>
+               </a>
+           </div>
+        </nav>
+        <div class="download-cv-button">
+            <div class="download-cv-label">Download CV</div>
+        </div>
+        <div class="copyright">©2020 All rights reserved.</div>
     </div>
-    <h3 class="about-me">About Me</h3>
-    <h6 class="my-description">
-        Student of Peter the Great St.Petersburg Polytechnic University. Also studying in TechnoPolis.
-    </h6>
+    <div class="small-rectangle">
+        <div class="sr-name">Denis Zhidkov</div>
+        <div class="sr-profession">Web Designer</div>
+    </div>
 </div>
 </body>
 </html>
