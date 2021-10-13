@@ -3,52 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Denis Zhidkov CV</title>
+    <link href="/styles/main-style.css"
+          rel="stylesheet">
 </head>
 <body>
 <div class="cv-card">
-    <div class="big-rectangle">
-        <div class="information-with-photo">
-            <div class="photo">
-                <img class="big-circle-photo"
-                     src="/img/my-photo.jpg"
-                     alt="My Photo"/>
-                <div class="shadow-after-photo"></div>
-            </div>
+    <main class="main-information">
+        <div class="cv-card-wrapper">
+            <section class="cv-photo">
+                <img src="/img/my-photo.jpg"
+                     width="1280"
+                     height="1205"
+                     alt="My Photo"
+                     class="photo"/>
+            </section>
+            <section class="cv-name">Denis Zhidkov</section>
+            <section class="cv-profession">Web Developer</section>
+            <nav class="social-media">
+                <div class="ok">
+                    <a href="https://ok.ru/profile/593794548737">
+                        <img class="small-circle-photo"
+                             src="/img/ok-logo.jpg"
+                             alt="OK-logo"/>
+                    </a>
+                </div>
+                <div class="vk">
+                    <a href="https://vk.com/pusyashniy_boy">
+                        <img class="small-circle-photo"
+                             src="/img/vk-logo.png"
+                             alt="VK-logo"/>
+                    </a>
+                </div>
+                <div class="github">
+                    <a href="https://github.com/DenZhid">
+                        <img class="small-circle-photo"
+                             src="/img/github-logo.jpg"
+                             alt="GitHub logo"/>
+                    </a>
+                </div>
+            </nav>
+            <section class="download-cv">
+                <button>Download CV</button>
+            </section>
         </div>
-        <div class="br-name">Denis Zhidkov</div>
-        <div class="br-profession">Web Designer</div>
-        <nav class="social-media">
-            <div class="ok">
-                <a href="https://ok.ru/profile/593794548737">
-                    <img class="small-circle-photo"
-                         src="/img/ok-logo.png"
-                         alt="OK-logo"/>
-                </a>
-            </div>
-            <div class="vk">
-                <a href="https://vk.com/pusyashniy_boy">
-                    <img class="small-circle-photo"
-                         src="/img/vk-logo.png"
-                         alt="VK-logo"/>
-                </a>
-            </div>
-           <div class="github">
-               <a href="https://github.com/DenZhid">
-                   <img class="small-circle-photo"
-                        src="/img/github-logo.jpg"
-                        alt="GitHub logo"/>
-               </a>
-           </div>
-        </nav>
-        <div class="download-cv-button">
-            <div class="download-cv-label">Download CV</div>
+        <footer class="copyright">©2021 All rights reserved.</footer>
+    </main>
+    <article class="description">
+        <div class="info-wrapper">
+            <h1 class="description-name">Denis Zhidkov</h1>
+            <section class="description-profession">Web Developer</section>
         </div>
-        <div class="copyright">©2020 All rights reserved.</div>
-    </div>
-    <div class="small-rectangle">
-        <div class="sr-name">Denis Zhidkov</div>
-        <div class="sr-profession">Web Designer</div>
-    </div>
+    </article>
 </div>
 </body>
 </html>
