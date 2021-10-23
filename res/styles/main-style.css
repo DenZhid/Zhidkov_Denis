@@ -55,33 +55,21 @@ body {
 .cv-name {
     display: flex;
 
-    width: 260px;
-    height: 44px;
     padding: 29px 0 0 0;
 
     line-height: 44px;
-    font-style: normal;
     font-weight: bold;
     font-size: 38px;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
 .cv-profession {
     display: flex;
 
-    width: 138px;
-    height: 23px;
     padding: 8px 0 0 0;
 
     line-height: 23px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
 .social-media {
@@ -98,7 +86,6 @@ body {
     border-radius: 100%;
     background: #C4C4C4;
 }
-
 
 .ok {
     margin: 0 10px 0 0;
@@ -124,16 +111,11 @@ body {
 }
 
 button {
-    width: 105px;
-    height: 20px;
     padding: 0 0 0 0;
 
     line-height: 20px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 17px;
     text-align: center;
-    color: #FFFFFF;
 
     border: 0;
     background: transparent;
@@ -142,16 +124,11 @@ button {
 .copyright {
     display: flex;
 
-    width: 161px;
-    height: 16px;
     padding: 66px 0 0 0;
 
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
-    color: #FFFFFF;
 }
 
 .description {
@@ -172,39 +149,25 @@ button {
     justify-content: center;
     flex-direction: column;
 
-    width: 321px;
-    height: 104px;
-    padding: 244px 161px 247px 162px;
 }
 
 .description-name {
     display: flex;
 
-    width: 424px;
-    height: 71px;
-    margin: 0 0 0 0;
+    margin: 0;
 
     line-height: 71px;
-    font-style: normal;
     font-weight: bold;
     font-size: 62px;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
 .description-profession {
     display: flex;
 
-    width: 152px;
-    height: 25px;
     margin: 8px 0 0 0;
 
     line-height: 25px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 22px;
     text-align: center;
-
-    color: #FFFFFF;
 }
