@@ -1,0 +1,29 @@
+{
+  "name": "homework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "rollup -cw",
+    "build": "rollup -c",
+    "build:assets": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-2021/Zhidkov_Denis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-2021/Zhidkov_Denis/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-2021/Zhidkov_Denis#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^2.58.0",
+    "@rollup/plugin-html": "^0.2.4",
+    "rollup-plugin-scss": "^3.0.0",
+    "sass": "^1.43.2"
+  }
+}
