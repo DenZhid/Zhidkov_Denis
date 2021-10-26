@@ -1,3 +1,19 @@
+/*@import "themes.css";*/
+
+:root .light-theme {
+    --page-color: #BABABA;
+    --bg-color: #FFFFFF;
+    --bg-description-color: #DCDCDC;
+    --text-color: #111111;
+}
+
+:root .dark-theme {
+    --page-color: #FFFFFF;
+    --bg-color:  #444444;
+    --bg-description-color: #222222;
+    --text-color: #FFFFFF;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -11,7 +27,8 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
 
-    color: #FFFFFF;
+    background: var(--page-color);
+    color: var(--text-color);
 }
 
 .cv-card {
@@ -20,7 +37,7 @@ body {
     width: 1127px;
     height: 595px;
 
-    background: #444444;
+    background: var(--bg-color);
     border-radius: 30px;
 }
 
@@ -35,14 +52,14 @@ body {
     padding: 70px 78px 16px 76px;
 }
 
-.cv-card-wrapper {
+.main-information-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.photo {
+.main-information-wrapper__my-photo {
     display: flex;
 
     width: 180px;
@@ -52,18 +69,18 @@ body {
     box-shadow: 12px 12px #C4C4C4
 }
 
-.cv-name {
+.main-information-wrapper__name {
     display: flex;
 
     padding: 29px 0 0 0;
 
     line-height: 44px;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 36px;
     text-align: center;
 }
 
-.cv-profession {
+.main-information-wrapper__profession {
     display: flex;
 
     padding: 8px 0 0 0;
@@ -72,14 +89,34 @@ body {
     text-align: center;
 }
 
-.social-media {
+.links {
     display: flex;
     flex-direction: row;
 
     padding: 16px 0 0 0;
 }
 
-.small-circle-photo {
+.social-media__ok-img {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 10px 0 0;
+
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+.social-media__vk-img {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 10px 0 0;
+
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+.social-media__gh-img {
     width: 24px;
     height: 24px;
 
@@ -87,15 +124,7 @@ body {
     background: #C4C4C4;
 }
 
-.ok {
-    margin: 0 10px 0 0;
-}
-
-.vk {
-    margin: 0 10px 0 0;
-}
-
-.download-cv {
+.main-information-wrapper__download-cv-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,25 +132,20 @@ body {
     width: 168px;
     height: 46px;
     margin: 57px 0 0 0;
-
-    background: #444444;
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 40px;
-}
-
-button {
     padding: 0 0 0 0;
 
     line-height: 20px;
     font-size: 17px;
     text-align: center;
+        color: var(--text-color);
 
-    border: 0;
-    background: transparent;
+    background: var(--bg-color);
+    border: 3px solid var(--text-color);
+    box-sizing: border-box;
+    border-radius: 40px;
 }
 
-.copyright {
+.main-information-wrapper__copyright{
     display: flex;
 
     padding: 66px 0 0 0;
@@ -139,11 +163,11 @@ button {
     width: 747px;
     height: 595px;
 
-    background: #222222;
+    background: var(--bg-description-color);
     border-radius: 30px;
 }
 
-.info-wrapper {
+.description-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +175,7 @@ button {
 
 }
 
-.description-name {
+.description-wrapper__name{
     display: flex;
 
     margin: 0;
@@ -162,7 +186,7 @@ button {
     text-align: center;
 }
 
-.description-profession {
+.description-wrapper__profession {
     display: flex;
 
     margin: 8px 0 0 0;

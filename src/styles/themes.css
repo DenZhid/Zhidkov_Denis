@@ -1,0 +1,13 @@
+:root .light-theme {
+    --page-color: #C4C4C4;
+    --bg-color: #FFFFFF;
+    --bg-description-color: #bababa;
+    --text-color: #111111;
+}
+
+:root .dark-theme {
+    --page-color: #C4C4C4;
+    --bg-color:  #444444;
+    --bg-description-color: #222222;
+    --text-color: #FFFFFF;
+}
