@@ -1,5 +1,3 @@
-@import "./reset.scss";
-
 body {
     display: flex;
     align-items: center;
@@ -13,7 +11,8 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
 
-    color: #FFFFFF;
+    background: var(--page-color);
+    color: var(--text-color);
 }
 
 .cv-card {
@@ -22,7 +21,7 @@ body {
     width: 1127px;
     height: 595px;
 
-    background: #444444;
+    background: var(--bg-color);
     border-radius: 30px;
 }
 
@@ -37,14 +36,14 @@ body {
     padding: 70px 78px 16px 76px;
 }
 
-.cv-card-wrapper {
+.main-information-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.photo {
+.main-information-wrapper__my-photo {
     display: flex;
 
     width: 180px;
@@ -54,46 +53,54 @@ body {
     box-shadow: 12px 12px #C4C4C4
 }
 
-.cv-name {
+.main-information-wrapper__name {
     display: flex;
 
-    width: 260px;
-    height: 44px;
     padding: 29px 0 0 0;
 
     line-height: 44px;
-    font-style: normal;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 36px;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
-.cv-profession {
+.main-information-wrapper__profession {
     display: flex;
 
-    width: 138px;
-    height: 23px;
     padding: 8px 0 0 0;
 
     line-height: 23px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
-.social-media {
+.links {
     display: flex;
     flex-direction: row;
 
     padding: 16px 0 0 0;
 }
 
-.small-circle-photo {
+.social-media__ok-img {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 10px 0 0;
+
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+.social-media__vk-img {
+    width: 24px;
+    height: 24px;
+
+    margin: 0 10px 0 0;
+
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+.social-media__gh-img {
     width: 24px;
     height: 24px;
 
@@ -101,16 +108,7 @@ body {
     background: #C4C4C4;
 }
 
-
-.ok {
-    margin: 0 10px 0 0;
-}
-
-.vk {
-    margin: 0 10px 0 0;
-}
-
-.download-cv {
+.main-information-wrapper__download-cv-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,42 +116,27 @@ body {
     width: 168px;
     height: 46px;
     margin: 57px 0 0 0;
+    padding: 0 0 0 0;
 
-    background: #444444;
-    border: 3px solid #FFFFFF;
+    line-height: 20px;
+    font-size: 17px;
+    text-align: center;
+    color: var(--text-color);
+
+    background: var(--bg-color);
+    border: 3px solid var(--text-color);
     box-sizing: border-box;
     border-radius: 40px;
 }
 
-button {
-    width: 105px;
-    height: 20px;
-    padding: 0 0 0 0;
-
-    line-height: 20px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
-    text-align: center;
-    color: #FFFFFF;
-
-    border: 0;
-    background: transparent;
-}
-
-.copyright {
+.main-information-wrapper__copyright{
     display: flex;
 
-    width: 161px;
-    height: 16px;
     padding: 66px 0 0 0;
 
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
-    color: #FFFFFF;
 }
 
 .description {
@@ -164,49 +147,35 @@ button {
     width: 747px;
     height: 595px;
 
-    background: #222222;
+    background: var(--bg-description-color);
     border-radius: 30px;
 }
 
-.info-wrapper {
+.description-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 
-    width: 321px;
-    height: 104px;
-    padding: 244px 161px 247px 162px;
 }
 
-.description-name {
+.description-wrapper__name{
     display: flex;
 
-    width: 424px;
-    height: 71px;
-    margin: 0 0 0 0;
+    margin: 0;
 
     line-height: 71px;
-    font-style: normal;
     font-weight: bold;
     font-size: 62px;
     text-align: center;
-
-    color: #FFFFFF;
 }
 
-.description-profession {
+.description-wrapper__profession {
     display: flex;
 
-    width: 152px;
-    height: 25px;
     margin: 8px 0 0 0;
 
     line-height: 25px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 22px;
     text-align: center;
-
-    color: #FFFFFF;
 }
