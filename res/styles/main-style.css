@@ -32,7 +32,7 @@ body {
 
     width: 260px;
     height: 509px;
-    padding: 70px 78px 16px 76px;
+    padding: 35px 78px 16px 76px;
 }
 
 .cv-card-wrapper {
@@ -79,21 +79,30 @@ body {
     padding: 16px 0 0 0;
 }
 
-.small-circle-photo {
+.small-image {
     width: 24px;
     height: 24px;
+    font-size: 14px;
+    border-radius: 100%;
+    background: #C4C4C4;
 
+}
+
+.github, .vk {
+    margin: 0 0 0 10px;
+}
+
+.github-img, .vk-img, .ok-img {
+    width: 24px;
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    overflow: hidden;
+    font-size: 14px;
     border-radius: 100%;
     background: #C4C4C4;
 }
 
-.ok {
-    margin: 0 10px 0 0;
-}
-
-.vk {
-    margin: 0 10px 0 0;
-}
 
 .download-cv {
     display: flex;
@@ -115,6 +124,7 @@ button {
 
     line-height: 20px;
     font-size: 17px;
+    color: #FFFFFF;
     text-align: center;
 
     border: 0;
