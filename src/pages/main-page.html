@@ -6,60 +6,64 @@
     <!-- inject:css -->
     <!-- endinject -->
 </head>
-<body class="dark-theme" onclick=changeTheme()>
+<body class="dark-theme">
 <div class="cv-card">
     <main class="main-information">
-        <div class="main-information-wrapper">
-            <img class="main-information-wrapper__my-photo"
+        <div class="main-information-header">
+            <img class="main-information-header__my-photo"
                  src="./assets/my-photo.jpg"
                  width="1280"
                  height="1205"
                  alt="My Photo"/>
-            <div class="main-information-wrapper__name">Denis Zhidkov</div>
-            <div class="main-information-wrapper__profession">Web Developer</div>
-            <nav class="links">
-                <div class="social-media">
-                    <a class="social-media__ok-link" href="https://ok.ru/profile/593794548737">
-                        <img class="social-media__ok-img"
-                             src="./assets/ok-logo.jpg"
-                             width="957"
-                             height="952"
-                             alt="OK-logo"/>
-                    </a>
+            <div class="main-information-header__name">Denis Zhidkov</div>
+            <div class="main-information-header__profession">Web Developer</div>
+            <div class="main-information-header__social">
+                <nav class="links">
+                    <div class="social-media">
+                        <a class="social-media__ok-link" href="https://ok.ru/profile/593794548737">
+                            <img class="social-media__ok-img"
+                                 src="./assets/ok-logo.jpg"
+                                 width="957"
+                                 height="952"
+                                 alt="OK-logo"/>
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <a class="social-media__vk-link" href="https://vk.com/pusyashniy_boy">
+                            <img class="social-media__vk-img"
+                                 src="./assets/vk-logo.png"
+                                 width="1600"
+                                 height="1600"
+                                 alt="VK-logo"/>
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <a class="social-media__gh-link" href="https://github.com/DenZhid">
+                            <img class="social-media__gh-img"
+                                 src="./assets/github-logo.jpg"
+                                 width="325"
+                                 height="320"
+                                 alt="GitHub logo"/>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <button class="main-information-header__download-cv-button"> Download CV</button>
+            <div class="main-information-header__copyright-with_change-theme-button">
+                <div class="copyright-with-button">
+                    <footer class="copyright-with-button__copyright">©2021 All rights reserved.</footer>
+                    <button class="copyright-with-button__change-theme-button" onclick=changeTheme()></button>
                 </div>
-                <div class="social-media">
-                    <a class="social-media__vk-link" href="https://vk.com/pusyashniy_boy">
-                        <img class="social-media__vk-img"
-                             src="./assets/vk-logo.png"
-                             width="1600"
-                             height="1600"
-                             alt="VK-logo"/>
-                    </a>
-                </div>
-                <div class="social-media">
-                    <a class="social-media__gh-link" href="https://github.com/DenZhid">
-                        <img class="social-media__gh-img"
-                             src="./assets/github-logo.jpg"
-                             width="325"
-                             height="320"
-                             alt="GitHub logo"/>
-                    </a>
-                </div>
-            </nav>
-            <button class="main-information-wrapper__download-cv-button"> Download CV</button>
-            <footer class="main-information-wrapper__copyright">©2021 All rights reserved.</footer>
+            </div>
         </div>
     </main>
     <article class="description">
-        <div class="description-wrapper">
-            <h1 class="description-wrapper__name">Denis Zhidkov</h1>
-            <div class="description-wrapper__profession">Web Developer</div>
+        <div class="description_about-me">
+            <h1 class="description_about-me__name">Denis Zhidkov</h1>
+            <div class="description_about-me__profession">Web Developer</div>
         </div>
     </article>
 </div>
-<script>
-
-</script>
 <!-- inject:js -->
 <!-- endinject -->
 </body>

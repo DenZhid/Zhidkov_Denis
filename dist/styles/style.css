@@ -11,14 +11,14 @@ body {
   background: var(--page-color);
   color: var(--text-color);
 }
-.cv-card {
+body .cv-card {
   display: flex;
   width: 1127px;
   height: 595px;
   background: var(--bg-color);
   border-radius: 30px;
 }
-.main-information {
+body .cv-card .main-information {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,20 +27,20 @@ body {
   height: 509px;
   padding: 70px 78px 16px 76px;
 }
-.main-information-wrapper {
+body .cv-card .main-information .main-information-header {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.main-information-wrapper__my-photo {
+body .cv-card .main-information .main-information-header__my-photo {
   display: flex;
   width: 180px;
   height: 180px;
   border-radius: 100%;
   box-shadow: 12px 12px #C4C4C4;
 }
-.main-information-wrapper__name {
+body .cv-card .main-information .main-information-header__name {
   display: flex;
   padding: 29px 0 0 0;
   line-height: 44px;
@@ -48,38 +48,38 @@ body {
   font-size: 36px;
   text-align: center;
 }
-.main-information-wrapper__profession {
+body .cv-card .main-information .main-information-header__profession {
   display: flex;
   padding: 8px 0 0 0;
   line-height: 23px;
   text-align: center;
 }
-.links {
+body .cv-card .main-information .links {
   display: flex;
   flex-direction: row;
   padding: 16px 0 0 0;
 }
-.social-media__ok-img {
+body .cv-card .main-information .links .social-media__ok-img {
   width: 24px;
   height: 24px;
   margin: 0 10px 0 0;
   border-radius: 100%;
   background: #C4C4C4;
 }
-.social-media__vk-img {
+body .cv-card .main-information .links .social-media__vk-img {
   width: 24px;
   height: 24px;
   margin: 0 10px 0 0;
   border-radius: 100%;
   background: #C4C4C4;
 }
-.social-media__gh-img {
+body .cv-card .main-information .links .social-media__gh-img {
   width: 24px;
   height: 24px;
   border-radius: 100%;
   background: #C4C4C4;
 }
-.main-information-wrapper__download-cv-button {
+body .cv-card .main-information .main-information-header__download-cv-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,14 +96,23 @@ body {
   box-sizing: border-box;
   border-radius: 40px;
 }
-.main-information-wrapper__copyright {
+body .cv-card .main-information .main-information-header__copyright-with_change-theme-button {
   display: flex;
   padding: 66px 0 0 0;
+}
+body .cv-card .main-information .main-information-header__copyright-with_change-theme-button .copyright-with-button__copyright {
+  display: inline;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
 }
-.description {
+body .cv-card .main-information .main-information-header__copyright-with_change-theme-button .copyright-with-button__change-theme-button {
+  display: inline;
+  height: 16px;
+  width: 16px;
+  background: var(--bg-description-color);
+}
+body .cv-card .description {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,13 +121,13 @@ body {
   background: var(--bg-description-color);
   border-radius: 30px;
 }
-.description-wrapper {
+body .cv-card .description .description_about-me {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.description-wrapper__name {
+body .cv-card .description .description_about-me .description_about-me__name {
   display: flex;
   margin: 0;
   line-height: 71px;
@@ -126,10 +135,10 @@ body {
   font-size: 62px;
   text-align: center;
 }
-.description-wrapper__profession {
+body .cv-card .description .description_about-me .description_about-me__profession {
   display: flex;
   margin: 8px 0 0 0;
-  line-height: 25px;
+  line-height: 24px;
   font-size: 22px;
   text-align: center;
 }
