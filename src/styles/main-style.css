@@ -1,14 +1,14 @@
-/*@import "themes.css";*/
+/*@import "styles/themes.css";*/
 
 :root .light-theme {
-    --page-color: #BABABA;
+    --page-color: #C4C4C4;
     --bg-color: #FFFFFF;
-    --bg-description-color: #DCDCDC;
+    --bg-description-color: #bababa;
     --text-color: #111111;
 }
 
 :root .dark-theme {
-    --page-color: #FFFFFF;
+    --page-color: #C4C4C4;
     --bg-color:  #444444;
     --bg-description-color: #222222;
     --text-color: #FFFFFF;
@@ -41,6 +41,7 @@ body {
     border-radius: 30px;
 }
 
+
 .main-information {
     display: flex;
     align-items: center;
@@ -52,14 +53,14 @@ body {
     padding: 70px 78px 16px 76px;
 }
 
-.main-information-wrapper {
+.main-information-header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.main-information-wrapper__my-photo {
+.main-information-header__my-photo {
     display: flex;
 
     width: 180px;
@@ -69,7 +70,7 @@ body {
     box-shadow: 12px 12px #C4C4C4
 }
 
-.main-information-wrapper__name {
+.main-information-header__name {
     display: flex;
 
     padding: 29px 0 0 0;
@@ -80,7 +81,7 @@ body {
     text-align: center;
 }
 
-.main-information-wrapper__profession {
+.main-information-header__profession {
     display: flex;
 
     padding: 8px 0 0 0;
@@ -124,7 +125,7 @@ body {
     background: #C4C4C4;
 }
 
-.main-information-wrapper__download-cv-button {
+.main-information-header__download-cv-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,14 +146,24 @@ body {
     border-radius: 40px;
 }
 
-.main-information-wrapper__copyright{
+.main-information-header__copyright-with_change-theme-button {
     display: flex;
-
     padding: 66px 0 0 0;
+}
 
+
+.copyright-with-button__copyright{
+    display: inline;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
+}
+
+.copyright-with-button__change-theme-button {
+    display: inline;
+    height: 16px;
+    width: 16px;
+    background: var(--bg-description-color);
 }
 
 .description {
@@ -167,7 +178,7 @@ body {
     border-radius: 30px;
 }
 
-.description-wrapper {
+.description_about-me {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,7 +186,7 @@ body {
 
 }
 
-.description-wrapper__name{
+.description_about-me__name{
     display: flex;
 
     margin: 0;
@@ -186,7 +197,7 @@ body {
     text-align: center;
 }
 
-.description-wrapper__profession {
+.description_about-me__profession {
     display: flex;
 
     margin: 8px 0 0 0;
