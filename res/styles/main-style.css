@@ -119,7 +119,7 @@ body {
     border-radius: 40px;
 }
 
-button {
+.download-cv-button {
     padding: 0 0 0 0;
 
     line-height: 20px;
