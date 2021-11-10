@@ -90,7 +90,7 @@ body {
     text-align: center;
 }
 
-.links {
+.main-information-header__social-links {
     display: flex;
     flex-direction: row;
 
