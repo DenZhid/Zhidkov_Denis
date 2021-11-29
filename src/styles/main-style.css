@@ -1,3 +1,19 @@
+/*@import "styles/themes.css";*/
+
+:root .light-theme {
+    --page-color: #C4C4C4;
+    --bg-color: #FFFFFF;
+    --bg-description-color: #bababa;
+    --text-color: #111111;
+}
+
+:root .dark-theme {
+    --page-color: #C4C4C4;
+    --bg-color:  #444444;
+    --bg-description-color: #222222;
+    --text-color: #FFFFFF;
+}
+
 body {
     display: flex;
     align-items: center;
@@ -11,7 +27,8 @@ body {
     font-family: Helvetica, sans-serif;
     font-size: 20px;
 
-    color: #FFFFFF;
+    background: var(--page-color);
+    color: var(--text-color);
 }
 
 .cv-card {
@@ -20,7 +37,7 @@ body {
     width: 1127px;
     height: 595px;
 
-    background: #444444;
+    background: var(--bg-color);
     border-radius: 30px;
 }
 
@@ -35,14 +52,14 @@ body {
     padding: 35px 78px 16px 76px;
 }
 
-.cv-card-wrapper {
+.main-information-header {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.photo {
+.main-information-header__my-photo {
     display: flex;
 
     width: 180px;
@@ -59,11 +76,11 @@ body {
 
     line-height: 44px;
     font-weight: bold;
-    font-size: 38px;
+    font-size: 36px;
     text-align: center;
 }
 
-.cv-profession {
+.main-information-header__profession {
     display: flex;
 
     padding: 8px 0 0 0;
@@ -72,39 +89,42 @@ body {
     text-align: center;
 }
 
-.social-media {
+.main-information-header__social-links {
     display: flex;
     flex-direction: row;
 
     padding: 16px 0 0 0;
 }
 
-.small-image {
+.social-media__ok-img {
     width: 24px;
     height: 24px;
-    font-size: 14px;
-    border-radius: 100%;
-    background: #C4C4C4;
 
-}
+    margin: 0 10px 0 0;
 
-.github, .vk {
-    margin: 0 0 0 10px;
-}
-
-.github-img, .vk-img, .ok-img {
-    width: 24px;
-    height: 24px;
-    max-height: 24px;
-    max-width: 24px;
-    overflow: hidden;
-    font-size: 14px;
     border-radius: 100%;
     background: #C4C4C4;
 }
 
+.social-media__vk-img {
+    width: 24px;
+    height: 24px;
 
-.download-cv {
+    margin: 0 10px 0 0;
+
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+.social-media__gh-img {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+.main-information-header__download-cv-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,33 +132,37 @@ body {
     width: 168px;
     height: 46px;
     margin: 57px 0 0 0;
-
-    background: #444444;
-    border: 3px solid #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 40px;
-}
-
-.download-cv-button {
     padding: 0 0 0 0;
 
     line-height: 20px;
     font-size: 17px;
-    color: #FFFFFF;
     text-align: center;
+        color: var(--text-color);
 
-    border: 0;
-    background: transparent;
+    background: var(--bg-color);
+    border: 3px solid var(--text-color);
+    box-sizing: border-box;
+    border-radius: 40px;
 }
 
-.copyright {
+.main-information-header__copyright-with_change-theme-button {
     display: flex;
-
     padding: 66px 0 0 0;
+}
 
+
+.copyright-with-button__copyright{
+    display: inline;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
+}
+
+.copyright-with-button__change-theme-button {
+    display: inline;
+    height: 16px;
+    width: 16px;
+    background: var(--bg-description-color);
 }
 
 .description {
@@ -149,11 +173,11 @@ body {
     width: 747px;
     height: 595px;
 
-    background: #222222;
+    background: var(--bg-description-color);
     border-radius: 30px;
 }
 
-.info-wrapper {
+.description_about-me {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,7 +185,7 @@ body {
 
 }
 
-.description-name {
+.description_about-me__name{
     display: flex;
 
     margin: 0;
@@ -172,12 +196,12 @@ body {
     text-align: center;
 }
 
-.description-profession {
+.description_about-me__profession {
     display: flex;
 
     margin: 8px 0 0 0;
 
-    line-height: 25px;
+    line-height: 24px;
     font-size: 22px;
     text-align: center;
 }
