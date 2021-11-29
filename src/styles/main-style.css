@@ -1,14 +1,12 @@
-/*@import "styles/themes.css";*/
-
 :root .light-theme {
-    --page-color: #C4C4C4;
+    --page-color: #444444;
     --bg-color: #FFFFFF;
     --bg-description-color: #bababa;
     --text-color: #111111;
 }
 
 :root .dark-theme {
-    --page-color: #C4C4C4;
+    --page-color: #FFFFFF;
     --bg-color:  #444444;
     --bg-description-color: #222222;
     --text-color: #FFFFFF;
@@ -18,25 +16,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 100%;
     padding: 0;
     margin: 0;
-
     line-height: 1.15;
     font-family: Helvetica, sans-serif;
     font-size: 20px;
-
     background: var(--page-color);
     color: var(--text-color);
 }
 
 .cv-card {
     display: flex;
-
     width: 1127px;
     height: 595px;
-
     background: var(--bg-color);
     border-radius: 30px;
 }
@@ -46,10 +39,9 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     width: 260px;
     height: 509px;
-    padding: 35px 78px 16px 76px;
+    padding: 70px 78px 16px 76px;
 }
 
 .main-information-header {
@@ -61,19 +53,15 @@ body {
 
 .main-information-header__my-photo {
     display: flex;
-
     width: 180px;
     height: 180px;
-
     border-radius: 100%;
     box-shadow: 12px 12px #C4C4C4
 }
 
-.cv-name {
+.main-information-header__name {
     display: flex;
-
     padding: 29px 0 0 0;
-
     line-height: 44px;
     font-weight: bold;
     font-size: 36px;
@@ -82,9 +70,7 @@ body {
 
 .main-information-header__profession {
     display: flex;
-
     padding: 8px 0 0 0;
-
     line-height: 23px;
     text-align: center;
 }
@@ -92,16 +78,13 @@ body {
 .main-information-header__social-links {
     display: flex;
     flex-direction: row;
-
     padding: 16px 0 0 0;
 }
 
 .social-media__ok-img {
     width: 24px;
     height: 24px;
-
     margin: 0 10px 0 0;
-
     border-radius: 100%;
     background: #C4C4C4;
 }
@@ -109,9 +92,7 @@ body {
 .social-media__vk-img {
     width: 24px;
     height: 24px;
-
     margin: 0 10px 0 0;
-
     border-radius: 100%;
     background: #C4C4C4;
 }
@@ -119,7 +100,6 @@ body {
 .social-media__gh-img {
     width: 24px;
     height: 24px;
-
     border-radius: 100%;
     background: #C4C4C4;
 }
@@ -128,17 +108,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 168px;
     height: 46px;
     margin: 57px 0 0 0;
     padding: 0 0 0 0;
-
     line-height: 20px;
     font-size: 17px;
     text-align: center;
-        color: var(--text-color);
-
+    color: var(--text-color);
     background: var(--bg-color);
     border: 3px solid var(--text-color);
     box-sizing: border-box;
@@ -149,7 +126,6 @@ body {
     display: flex;
     padding: 66px 0 0 0;
 }
-
 
 .copyright-with-button__copyright{
     display: inline;
@@ -169,10 +145,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 747px;
     height: 595px;
-
     background: var(--bg-description-color);
     border-radius: 30px;
 }
@@ -187,9 +161,7 @@ body {
 
 .description_about-me__name{
     display: flex;
-
     margin: 0;
-
     line-height: 71px;
     font-weight: bold;
     font-size: 62px;
@@ -198,9 +170,7 @@ body {
 
 .description_about-me__profession {
     display: flex;
-
     margin: 8px 0 0 0;
-
     line-height: 24px;
     font-size: 22px;
     text-align: center;
