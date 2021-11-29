@@ -1,0 +1,183 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    line-height: 1.15;
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+
+    color: #FFFFFF;
+}
+
+.cv-card {
+    display: flex;
+
+    width: 1127px;
+    height: 595px;
+
+    background: #444444;
+    border-radius: 30px;
+}
+
+.main-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 260px;
+    height: 509px;
+    padding: 35px 78px 16px 76px;
+}
+
+.cv-card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.photo {
+    display: flex;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 100%;
+    box-shadow: 12px 12px #C4C4C4
+}
+
+.cv-name {
+    display: flex;
+
+    padding: 29px 0 0 0;
+
+    line-height: 44px;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+}
+
+.cv-profession {
+    display: flex;
+
+    padding: 8px 0 0 0;
+
+    line-height: 23px;
+    text-align: center;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+
+    padding: 16px 0 0 0;
+}
+
+.small-image {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    border-radius: 100%;
+    background: #C4C4C4;
+
+}
+
+.github, .vk {
+    margin: 0 0 0 10px;
+}
+
+.github-img, .vk-img, .ok-img {
+    width: 24px;
+    height: 24px;
+    max-height: 24px;
+    max-width: 24px;
+    overflow: hidden;
+    font-size: 14px;
+    border-radius: 100%;
+    background: #C4C4C4;
+}
+
+
+.download-cv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 168px;
+    height: 46px;
+    margin: 57px 0 0 0;
+
+    background: #444444;
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 40px;
+}
+
+.download-cv-button {
+    padding: 0 0 0 0;
+
+    line-height: 20px;
+    font-size: 17px;
+    color: #FFFFFF;
+    text-align: center;
+
+    border: 0;
+    background: transparent;
+}
+
+.copyright {
+    display: flex;
+
+    padding: 66px 0 0 0;
+
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 747px;
+    height: 595px;
+
+    background: #222222;
+    border-radius: 30px;
+}
+
+.info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.description-name {
+    display: flex;
+
+    margin: 0;
+
+    line-height: 71px;
+    font-weight: bold;
+    font-size: 62px;
+    text-align: center;
+}
+
+.description-profession {
+    display: flex;
+
+    margin: 8px 0 0 0;
+
+    line-height: 25px;
+    font-size: 22px;
+    text-align: center;
+}
