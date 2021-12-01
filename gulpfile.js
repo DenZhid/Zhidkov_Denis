@@ -58,8 +58,7 @@ gulp.task('html', function () {
     const target = gulp.src(htmlPath);
     const sources = gulp.src(['./dist/scripts/*.js', './dist/styles/*.css'], { read: false });
 
-    // Почему-то с опциями добавляются лишние ../ и ./, поэтому закоментил их
-    return target.pipe(inject(sources, /*{ ignorePath: '../dist', relative: true, addPrefix: '.' }*/))
+    return target.pipe(inject(sources))
         .pipe(gulp.dest(distPath));
 });
 
