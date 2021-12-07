@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("changeThemeButton").addEventListener("click", () => {
         document.body.classList.toggle("light-theme");
         document.body.classList.toggle("dark-theme");
-    });
+    })
 });
 
 class Skill {
@@ -18,7 +18,7 @@ class SkillPanel {
     constructor(skillsList, skillsContainer) {
         this.skillsContainer = skillsContainer;
         this.skillsList = skillsList;
-        this.drawSkillPanel();
+        this.drawSkillPanel()
     }
 
     drawSkillPanel() {
@@ -61,17 +61,17 @@ document.getElementById("add-skill-button").addEventListener("click", () => {
     if (enteredName.value === "" || enteredName.value.includes('<') || enteredName.value.includes('>')
         || enteredValue.value === "" || enteredValue.value < 0 || enteredValue.value > 100 || isNaN(enteredValue.value))
     {
-        alert("Entered wrong values");
+        alert("Entered wrong values")
         return;
     }
     for (let i = 0; i < skillList.length; i++) {
         let skill = skillList[i];
         if (skill.name === enteredName.value) {
-            alert("This skill already exits");
+            alert("This skill already exits")
             return;
         }
     }
     let skill = new Skill(enteredName.value, enteredValue.value);
     skillList.push(skill);
     skillPanel.addToSkillPanel(skill);
-});
+})

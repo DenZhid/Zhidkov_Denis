@@ -5,13 +5,13 @@ const inject = require('gulp-inject');
 const rollup = require('rollup');
 const image = require('gulp-image');
 
-const assetsPath = 'src/assets/*.{jpg, png}';
+const assetsPath = 'src/assets/*.png';
 const stylesPath = './src/styles/**/*.scss';
-const jsPath = 'src/scripts/*.js';
-const htmlPath = './src/pages/main-page.html';
+const jsPath = 'src/scripts/**/*.js';
+const htmlPath = './src/pages/*.html';
 const distPath = './dist/';
 const rollupConfig = {
-    input: 'src/scripts/changeTheme.js'
+    input: 'src/scripts/app.js'
 };
 
 const imageOptimizingSettings = {
