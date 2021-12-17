@@ -13,7 +13,7 @@ export default class SkillList {
 
     checkSkill(skill) {
         for (let i = 0; i < this.skillList.length; i++) {
-            if (this.skillList[i].name === skill.value) {
+            if (this.skillList[i].name === skill.name) {
                 return true;
             }
         }

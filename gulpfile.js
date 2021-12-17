@@ -10,6 +10,7 @@ const stylesPath = './src/styles/**/*.scss';
 const jsPath = './src/scripts/**/*.js';
 const htmlPath = './src/pages/*.html';
 const distPath = './dist/';
+const htmlDistPath = './dist/pages'
 const rollupConfig = {
     input: 'src/scripts/app.js'
 };
@@ -29,7 +30,7 @@ gulp.task('rollup', async (done) => {
 
     await bundle.write({
         format: 'iife',
-        file: './scripts/app.js'
+        file: 'dist/scripts/app.js'
     });
 
     done();
@@ -59,7 +60,7 @@ gulp.task('html', function () {
     const sources = gulp.src(['./dist/scripts/*.js', './dist/styles/*.css'], { read: false });
 
     return target.pipe(inject(sources, {ignorePath: '../dist', relative: true, addPrefix: '.'}))
-        .pipe(gulp.dest(distPath));
+        .pipe(gulp.dest(htmlDistPath));
 });
 
 gulp.task('default', gulp.series('rollup', 'css', 'assets', 'html', 'watch'));
