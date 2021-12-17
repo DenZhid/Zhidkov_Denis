@@ -1,77 +1,119 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("changeThemeButton").addEventListener("click", () => {
-        document.body.classList.toggle("light-theme");
-        document.body.classList.toggle("dark-theme");
-    });
-});
+(function () {
+    'use strict';
 
-class Skill {
-
-    constructor(name, value) {
-        this.name = name;
-        this.value = value;
-    }
-}
-
-class SkillPanel {
-
-    constructor(skillsList, skillsContainer) {
-        this.skillsContainer = skillsContainer;
-        this.skillsList = skillsList;
-        this.drawSkillPanel();
-    }
-
-    drawSkillPanel() {
-        for (let i = 0; i < this.skillsList.length; i++) {
-            this.addToSkillPanel(this.skillsList[i]);
+    class Skill {
+        constructor(name, value) {
+            this.name = name;
+            this.value = value;
         }
     }
 
-    addToSkillPanel(skill) {
-        const element = document.createElement("section");
-        element.classList.add("description-about-me-skills-section_skills_skill-" + skill.name);
-        element.innerHTML =
-            `<div class="description-about-me-skills-section_skills_skill_name"> ${skill.name} </div> 
+    class SkillList {
+        constructor(skillList) {
+            this.skillList = skillList;
+        }
+
+        addSkill(skill) {
+            this.skillList.push(skill);
+        }
+
+        removeSkill(skill) {
+            this.skillList.filter((f) => {return f !== skill});
+        }
+
+        checkSkill(skill) {
+            for (let i = 0; i < this.skillList.length; i++) {
+                if (this.skillList[i].name === skill.value) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+
+    class SkillListController {
+
+        constructor(skillList, skillListView) {
+            this.skillList = skillList;
+            this.skillListView = skillListView;
+        }
+
+        addSkillToList(skill) {
+            this.skillList.addSkill(skill);
+            this.skillListView.redrawSkill(skill);
+            document.getElementById(skill.name).addEventListener("click", () => this.removeSkillFromList(skill));
+        }
+
+        addNewSkillListener() {
+            document.getElementById("add-skill-button").addEventListener("click", () => {
+                let enteredName = document.querySelector('.description-about-me-skills-section_skill-adder_skill-name');
+                let enteredValue = document.querySelector('.description-about-me-skills-section_skill-adder_skill-value');
+                if (enteredName.value === "" || enteredName.value.includes('<') || enteredName.value.includes('>')
+                    || enteredValue.value === "" || enteredValue.value < 0 || enteredValue.value > 100 || isNaN(enteredValue.value)) {
+                    alert("Entered wrong values");
+                    return;
+                }
+                let skill = new Skill(enteredName.value, enteredValue.value);
+                if (this.skillList.checkSkill(skill)) {
+                    alert("This skill already exits");
+                    return;
+                }
+                this.addSkillToList(skill);
+            });
+        }
+
+        removeSkillFromList(skill) {
+            this.skillList.removeSkill(skill);
+            this.skillListView.redrawRemoved(skill);
+        }
+    }
+
+    class SkillListView {
+
+        constructor(skillContainer) {
+            this.skillContainer = skillContainer;
+        }
+
+        redrawSkill(skill) {
+            const element = document.createElement("section");
+            element.classList.add("description-about-me-skills-section_skills_skill-" + skill.name);
+            element.innerHTML =
+                `<div class="description-about-me-skills-section_skills_skill_name"> ${skill.name} </div> 
             <progress class="description-about-me-skills-section_skills_skill_value" max="100" value=${skill.value}>' 
             </progress> 
             <button id ="${skill.name}" class="description-about-me-skills-section_skills_skill_delete_button">-</button>`;
-        this.skillsContainer.appendChild(element);
-        document.getElementById(skill.name).addEventListener("click", () => this.removeFromSkillPanel(skill));
-    }
+            this.skillContainer.appendChild(element);
+        }
 
-    removeFromSkillPanel(skill) {
-        this.skillsContainer.querySelector(".description-about-me-skills-section_skills_skill-" + skill.name).remove();
-    }
-}
-
-const skillContainer = document.querySelector('.description-about-me-skills-section_skills');
-
-let skillList = [
-    new Skill('Java', 60),
-    new Skill('Kotlin', 30),
-    new Skill('Spring', 10),
-    new Skill('SQL', 5)
-];
-
-const skillPanel = new SkillPanel(skillList, skillContainer);
-
-document.getElementById("add-skill-button").addEventListener("click", () => {
-    let enteredName = document.querySelector('.description-about-me-skills-section_skill-adder_skill-name');
-    let enteredValue = document.querySelector('.description-about-me-skills-section_skill-adder_skill-value');
-    if (enteredName.value === "" || enteredName.value.includes('<') || enteredName.value.includes('>')
-        || enteredValue.value === "" || enteredValue.value < 0 || enteredValue.value > 100 || isNaN(enteredValue.value))
-    {
-        alert("Entered wrong values");
-        return;
-    }
-    for (let i = 0; i < skillList.length; i++) {
-        let skill = skillList[i];
-        if (skill.name === enteredName.value) {
-            alert("This skill already exits");
-            return;
+        redrawRemoved(skill) {
+            this.skillContainer.querySelector(".description-about-me-skills-section_skills_skill-" + skill.name).remove();
         }
     }
-    let skill = new Skill(enteredName.value, enteredValue.value);
-    skillList.push(skill);
-    skillPanel.addToSkillPanel(skill);
-});
+
+    function changeTheme() {
+        document.body.classList.toggle("light-theme");
+        document.body.classList.toggle("dark-theme");
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("changeThemeButton").addEventListener("click", () => changeTheme());
+    });
+
+    const skillContainer = document.querySelector('.description-about-me-skills-section_skills');
+
+    let startSkillList = [
+        new Skill('Java', 60),
+        new Skill('Kotlin', 30),
+        new Skill('Spring', 10),
+        new Skill('SQL', 5)
+    ];
+
+    const skillList = new SkillList([]);
+    const skillListView = new SkillListView(skillContainer);
+    const skillLitController = new SkillListController(skillList, skillListView);
+    for (let i = 0; i < startSkillList.length; i++) {
+        skillLitController.addSkillToList(startSkillList[i]);
+    }
+    skillLitController.addNewSkillListener();
+
+})();

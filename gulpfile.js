@@ -7,7 +7,7 @@ const image = require('gulp-image');
 
 const assetsPath = 'src/assets/*.png';
 const stylesPath = './src/styles/**/*.scss';
-const jsPath = 'src/scripts/**/*.js';
+const jsPath = './src/scripts/**/*.js';
 const htmlPath = './src/pages/*.html';
 const distPath = './dist/';
 const rollupConfig = {
@@ -28,7 +28,7 @@ gulp.task('rollup', async (done) => {
     const bundle = await rollup.rollup(rollupConfig);
 
     bundle.write({
-        format: 'esm',
+        format: 'iife',
         file: 'dist/scripts/app.js'
     });
 
