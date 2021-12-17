@@ -45,9 +45,12 @@
         }
 
         addNewSkillListener() {
-            document.getElementById("add-skill-button").addEventListener("click", () => {
-                let enteredName = document.querySelector('.description-about-me-skills-section_skill-adder_skill-name');
-                let enteredValue = document.querySelector('.description-about-me-skills-section_skill-adder_skill-value');
+            const form = document.querySelector('form');
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                new FormData(form);
+                let enteredName = form.querySelector('[name = "skill-name"]');
+                let enteredValue = form.querySelector('[name = "skill-value"]');
                 if (enteredName.value === "" || enteredName.value.includes('<') || enteredName.value.includes('>')
                     || enteredValue.value === "" || enteredValue.value < 0 || enteredValue.value > 100 || isNaN(enteredValue.value)) {
                     alert("Entered wrong values");
@@ -78,10 +81,10 @@
             const element = document.createElement("section");
             element.classList.add("description-about-me-skills-section_skills_skill-" + skill.name);
             element.innerHTML =
-                `<div class="description-about-me-skills-section_skills_skill_name"> ${skill.name} </div> 
-            <progress class="description-about-me-skills-section_skills_skill_value" max="100" value=${skill.value}>' 
+                `<div class="skill_name"> ${skill.name} </div> 
+            <progress max="100" value=${skill.value}>' 
             </progress> 
-            <button id ="${skill.name}" class="description-about-me-skills-section_skills_skill_delete_button">-</button>`;
+            <button id ="${skill.name}" class="skill_delete-button">-</button>`;
             this.skillContainer.appendChild(element);
         }
 

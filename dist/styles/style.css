@@ -500,7 +500,7 @@ template {
   width: 100%;
   height: 100%;
 }
-.description-about-me-skills-section .description-about-me-skills-section_skills section .description-about-me-skills-section_skills_skill_name {
+.description-about-me-skills-section .description-about-me-skills-section_skills section .skill_name {
   width: 100px;
 }
 .description-about-me-skills-section .description-about-me-skills-section_skills section progress {
@@ -523,20 +523,20 @@ template {
   height: 14px;
   border-radius: 9px;
 }
-.description-about-me-skills-section .description-about-me-skills-section_skills section .description-about-me-skills-section_skills_skill_delete_button {
+.description-about-me-skills-section .description-about-me-skills-section_skills section .skill_delete-button {
   border-radius: 100%;
   background-color: var(--bg-description-color);
   border: 1px solid var(--text-color);
   color: var(--text-color);
 }
-.description-about-me-skills-section .description-about-me-skills-section_skill-adder {
+.description-about-me-skills-section .description-about-me-skills-section_skill-form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-.description-about-me-skills-section .description-about-me-skills-section_skill-adder input {
+.description-about-me-skills-section .description-about-me-skills-section_skill-form input {
   box-sizing: border-box;
   border-radius: 40px;
   background-color: var(--bg-description-color);
@@ -544,7 +544,7 @@ template {
   color: var(--text-color);
   margin: 0 0 0 10px;
 }
-.description-about-me-skills-section .description-about-me-skills-section_skill-adder .description-about-me-skills-section_skill-adder_submit-button {
+.description-about-me-skills-section .description-about-me-skills-section_skill-form #add-skill-button {
   border-radius: 100%;
   background-color: var(--bg-description-color);
   border: 1px solid var(--text-color);
