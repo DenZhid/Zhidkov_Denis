@@ -27,9 +27,9 @@ const imageOptimizingSettings = {
 gulp.task('rollup', async (done) => {
     const bundle = await rollup.rollup(rollupConfig);
 
-    bundle.write({
+    await bundle.write({
         format: 'iife',
-        file: 'dist/scripts/app.js'
+        file: './scripts/app.js'
     });
 
     done();
@@ -58,7 +58,7 @@ gulp.task('html', function () {
     const target = gulp.src(htmlPath);
     const sources = gulp.src(['./dist/scripts/*.js', './dist/styles/*.css'], { read: false });
 
-    return target.pipe(inject(sources))
+    return target.pipe(inject(sources, {ignorePath: '../dist', relative: true, addPrefix: '.'}))
         .pipe(gulp.dest(distPath));
 });
 
