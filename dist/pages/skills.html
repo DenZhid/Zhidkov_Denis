@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Denis Zhidkov CV</title>
     <!-- inject:css -->
+    <link rel="stylesheet" href="./../../dist/styles/style.css">
     <!-- endinject -->
 </head>
 <body class="dark-theme">
@@ -59,12 +60,19 @@
     </main>
     <div class="description">
         <div class="description-about-me">
-            <div class="description-about-me-text">
-                <h1 class="description-about-me-text__name">Denis Zhidkov</h1>
-                <div class="description-about-me-text__profession">Web Developer</div>
+            <div class="description-about-me-skills-section">
+                <h1>My Skills</h1>
+                <div class="description-about-me-skills-section_skills">
+                    <!--Skills' bars will be there-->
+                </div>
+                <form class="description-about-me-skills-section_skill-form">
+                    <input name="skill-name"  placeholder="Enter skill name here">
+                    <input name="skill-value" placeholder="Enter value of skill here">
+                    <button type="submit" id ="add-skill-button">+</button>
+                </form>
             </div>
             <div class="description-about-me-change-description-button">
-                <a class="description-about-me-change-description-button__link" href="skills.html">
+                <a class="description-about-me-change-description-button__link" href="main-page.html">
                     <img class="description-about-me-change-description-button__img"
                          src="../assets/change_description_button.png"
                          width="200"
@@ -76,6 +84,7 @@
     </div>
 </div>
 <!-- inject:js -->
+<script src="./../../dist/scripts/app.js"></script>
 <!-- endinject -->
 </body>
 </html>

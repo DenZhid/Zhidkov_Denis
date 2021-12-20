@@ -5,13 +5,14 @@ const inject = require('gulp-inject');
 const rollup = require('rollup');
 const image = require('gulp-image');
 
-const assetsPath = 'src/assets/*.{jpg, png}';
+const assetsPath = 'src/assets/*.png';
 const stylesPath = './src/styles/**/*.scss';
-const jsPath = 'src/scripts/*.js';
-const htmlPath = './src/pages/main-page.html';
+const jsPath = './src/scripts/**/*.js';
+const htmlPath = './src/pages/*.html';
 const distPath = './dist/';
+const htmlDistPath = './dist/pages'
 const rollupConfig = {
-    input: 'src/scripts/changeTheme.js'
+    input: 'src/scripts/app.js'
 };
 
 const imageOptimizingSettings = {
@@ -27,8 +28,8 @@ const imageOptimizingSettings = {
 gulp.task('rollup', async (done) => {
     const bundle = await rollup.rollup(rollupConfig);
 
-    bundle.write({
-        format: 'esm',
+    await bundle.write({
+        format: 'iife',
         file: 'dist/scripts/app.js'
     });
 
@@ -58,8 +59,8 @@ gulp.task('html', function () {
     const target = gulp.src(htmlPath);
     const sources = gulp.src(['./dist/scripts/*.js', './dist/styles/*.css'], { read: false });
 
-    return target.pipe(inject(sources))
-        .pipe(gulp.dest(distPath));
+    return target.pipe(inject(sources, {ignorePath: '../dist', relative: true, addPrefix: '.'}))
+        .pipe(gulp.dest(htmlDistPath));
 });
 
 gulp.task('default', gulp.series('rollup', 'css', 'assets', 'html', 'watch'));
