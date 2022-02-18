@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Denis Zhidkov CV</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="./../../dist/styles/style.css">
+    <!-- endinject -->
+</head>
+<body class="dark-theme">
+<div class="cv-card">
+    <main class="main-information">
+        <div class="main-information-header">
+            <img class="main-information-header__my-photo"
+                 src="../assets/my-photo.png"
+                 width="200"
+                 height="200"
+                 alt="My Photo"/>
+            <div class="main-information-header__name">Denis Zhidkov</div>
+            <div class="main-information-header__profession">Web Developer</div>
+            <div class="main-information-header__social">
+                <nav class="links">
+                    <div class="social-media">
+                        <a class="social-media__ok-link" href="https://ok.ru/profile/593794548737">
+                            <img class="social-media__ok-img"
+                                 src="../assets/ok-logo.png"
+                                 width="200"
+                                 height="200"
+                                 alt="OK-logo"/>
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <a class="social-media__vk-link" href="https://vk.com/pusyashniy_boy">
+                            <img class="social-media__vk-img"
+                                 src="../assets/vk-logo.png"
+                                 width="200"
+                                 height="200"
+                                 alt="VK-logo"/>
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <a class="social-media__gh-link" href="https://github.com/DenZhid">
+                            <img class="social-media__gh-img"
+                                 src="../assets/github-logo.png"
+                                 width="200"
+                                 height="200"
+                                 alt="GitHub logo"/>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+            <button class="main-information-header__download-cv-button"> Download CV</button>
+            <div class="main-information-header__copyright-with_change-theme-button">
+                <div class="copyright-with-button">
+                    <footer class="copyright-with-button__copyright">©2021 All rights reserved.</footer>
+                    <button id="changeThemeButton" class="copyright-with-button__change-theme-button"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="description">
+        <div class="description-about-me">
+            <div class="description-about-me-skills-section">
+                <h1>My Skills</h1>
+                <div class="description-about-me-skills-section_skills">
+                    <!--Skills' bars will be there-->
+                </div>
+                <form class="description-about-me-skills-section_skill-form">
+                    <input name="skill-name"  placeholder="Enter skill name here">
+                    <input name="skill-value" placeholder="Enter value of skill here">
+                    <button type="submit" id ="add-skill-button">+</button>
+                </form>
+            </div>
+            <div class="description-about-me-change-description-button">
+                <a class="description-about-me-change-description-button__link" href="main-page.html">
+                    <img class="description-about-me-change-description-button__img"
+                         src="../assets/change_description_button.png"
+                         width="200"
+                         height="200"
+                         alt="change_description_button"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- inject:js -->
+<script src="./../../dist/scripts/app.js"></script>
+<!-- endinject -->
+</body>
+</html>
